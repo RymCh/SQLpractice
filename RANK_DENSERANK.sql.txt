@@ -1,0 +1,2 @@
+select e.*, rank() over(partition by order_date order by quantity desc) as rnk, dense_rank() over(partition by order_date order by quantity desc) as dense_rnk
+from `RimDataset.fashion_orders` e

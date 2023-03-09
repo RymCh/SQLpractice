@@ -1,0 +1,2 @@
+select id,product_id, quantity, order_date,row_number() over(partition by order_date order by order_date) as rn,
+from RimDataset.fashion_orders

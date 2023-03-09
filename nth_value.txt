@@ -1,0 +1,2 @@
+select p.*, nth_value(quantity, 2) over(order by quantity desc) as firstvalue
+from RimDataset.fashion_orders p

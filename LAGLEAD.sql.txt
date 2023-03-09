@@ -1,0 +1,3 @@
+select e.*, lag(quantity) over(order by quantity) as LAG, lead(quantity) over(order by quantity desc) as LEAD
+from `RimDataset.fashion_orders` e
+order by quantity
